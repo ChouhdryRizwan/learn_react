@@ -2,15 +2,16 @@ import { useState } from "react";
 
 function App() {
   let a = 2 + 2;
-  const myarr = useState<number>(10);
+
+  const myarr = useState<number>(0);
   let myValue = myarr[0];
   let setValue = myarr[1];
   return (
     <div>
-      <p>number: {myValue}</p>
+      <p>number: - {myValue}</p>
       {/* <p>number: {a}</p> */}
-      <button onClick={() => a++}>click me</button>
-      <button onClick={() => console.log(a)}>log value</button>
+      {/* <button onClick={() => a++}>click me</button> */}
+      <button onClick={() => setValue(myValue + 1)}>log value</button>
     </div>
   );
 }
